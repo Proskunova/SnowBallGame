@@ -12,4 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a91697e048c8a6a4aa9b7b9acb8984dd, type: 3}
   m_Name: player
   m_EditorClassIdentifier: 
-  Speed: 3
+  _healthsEnemy: 0
+  _speed: 3
+  _timeBetweenAttack: 0
+  _timeCreateSnowBall: 0
+  _score: 0

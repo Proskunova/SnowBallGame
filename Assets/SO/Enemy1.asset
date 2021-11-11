@@ -10,6 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a91697e048c8a6a4aa9b7b9acb8984dd, type: 3}
-  m_Name: Enemy
+  m_Name: Enemy1
   m_EditorClassIdentifier: 
-  Speed: 0
+  _healthsEnemy: 1
+  _speed: 3
+  _timeBetweenAttack: 5
+  _timeCreateSnowBall: 0
+  _score: 1
+  Skin: CatDaughter
+  skeleton: {fileID: 11400000, guid: 4fa787752ea6a28418d0185241b583c6, type: 2}
