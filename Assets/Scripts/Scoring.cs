@@ -18,14 +18,12 @@ namespace Game
             UpdateText();
         }
 
-
         private void ScoreCount()
         {
-            _score += _settings._score;// подписаться на лист врагов и получить от туда Скор.
+            _score += _settings.Score;// подписаться на лист врагов и получить от туда Скор.
             UpdateText();
 
             Debug.Log(_score);
-            
         }
 
         private void UpdateText()

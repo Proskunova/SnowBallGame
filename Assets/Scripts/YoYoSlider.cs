@@ -15,6 +15,5 @@ namespace Game
             _slider.value = _slider.minValue;
             DOTween.To(() => _slider.value, x => _slider.value = x, 1, 3f).SetEase(Ease.Linear).SetLoops(-1, LoopType.Yoyo);
         }
-
     }
 }

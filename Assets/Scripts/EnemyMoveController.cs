@@ -3,7 +3,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-
 namespace Game
 {
     public class EnemyMoveController : MonoBehaviour
@@ -29,7 +28,7 @@ namespace Game
         {
             Vector2 randomPoint = _bounds.GetRandomPoint();
             float distance = Vector2.Distance(randomPoint, transform.position);
-            float time = distance / _settings._speed;
+            float time = distance / _settings.Speed;
             CheckRotation(randomPoint);
 
             transform.DOMove(randomPoint, time).SetEase(Ease.Linear);

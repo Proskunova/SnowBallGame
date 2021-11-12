@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+
 namespace Game
 {
     public class MoveController : MonoBehaviour
@@ -10,7 +11,10 @@ namespace Game
 
         private void Update()
         {
-            transform.Translate(Vector3.up * Time.deltaTime * _settings._speed * _joystick.Value);
+            if (transform.position.y > -3.55 && transform.position.y < 2.6)
+            {
+                transform.Translate(Vector3.up * Time.deltaTime * _settings.Speed * _joystick.Value);
+            }
         }
     }
 }
