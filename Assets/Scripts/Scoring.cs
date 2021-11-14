@@ -18,9 +18,21 @@ namespace Game
             UpdateText();
         }
 
-        private void ScoreCount()
+
+        private void OnEnable()
         {
-            _score += _settings.Score;// подписаться на лист врагов и получить от туда Скор.
+            HitCheck.OnHit += ScoreCount;
+        }
+
+        private void OnDisable()
+        {
+            HitCheck.OnHit -= ScoreCount;
+
+        }
+        private void ScoreCount( int points)
+        {
+            points = _settings.Score;
+            _score += points;// подписаться на лист врагов и получить от туда Скор.
             UpdateText();
 
             Debug.Log(_score);

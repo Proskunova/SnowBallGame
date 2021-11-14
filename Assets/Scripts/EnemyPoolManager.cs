@@ -12,6 +12,7 @@ namespace Game
         [SerializeField] private GameObject _pooledEnemy;
         [SerializeField] private int _pooledAmount;
         [SerializeField] private RandomPointBox _bounds;
+        [SerializeField] Transform _poolEnemy;
 
         private void Awake()
         {
@@ -29,7 +30,10 @@ namespace Game
 
         private void Start()
         {
-            GetEnemy().SetActive(true);
+            GameObject test = GetEnemy();
+            test.transform.position = _poolEnemy.position;
+            test.SetActive(true);
+            test.GetComponent<EnemyMoveController>().EnemyMove();
         }
 
         public GameObject GetEnemy()

@@ -11,7 +11,7 @@ namespace Game
         public float HealthsEnemy;
         public float Speed;
         public float TimeBetweenAttack;
-        public float TimeCreateSnowBall;
+        public float Power;
 
         public int Score;
 

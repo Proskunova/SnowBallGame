@@ -6,12 +6,16 @@ namespace Game
 {
     public class RandomPointBox : MonoBehaviour
     {
+        public Vector2 GetBoundMax => boundMax;
+        public Vector2 GetBoundMin => boundMin;
+
         [SerializeField] private Vector2 boundMin;
         [SerializeField] private Vector2 boundMax;
+        [SerializeField] private Color _color;
 
         private void OnDrawGizmos()
         {
-            Gizmos.color = Color.cyan;
+            Gizmos.color = _color;
 
             var point1 = new Vector3(boundMin.x, boundMax.y);
             var point2 = new Vector3(boundMax.x, boundMin.y);

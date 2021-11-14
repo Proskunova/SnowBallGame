@@ -9,11 +9,12 @@ namespace Game
     public class YoYoSlider : MonoBehaviour
     {
         [SerializeField] private Slider _slider;
+        [SerializeField] private float _timeMove;
 
         private void Start()
         {
             _slider.value = _slider.minValue;
-            DOTween.To(() => _slider.value, x => _slider.value = x, 1, 3f).SetEase(Ease.Linear).SetLoops(-1, LoopType.Yoyo);
+            DOTween.To(() => _slider.value, x => _slider.value = x, 1, _timeMove).SetEase(Ease.Linear).SetLoops(-1, LoopType.Yoyo);
         }
     }
 }

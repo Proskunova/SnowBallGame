@@ -13,11 +13,7 @@ namespace Game
         private Vector3 lookRight = Vector3.zero;
         private Vector3 lookLeft = new Vector3(0, 180, 0);
 
-        private void Start()
-        {
-            EnemyMove();
-        }
-
+       
         public void Init(Settings newSettings, RandomPointBox box)
         {
             _settings = newSettings;

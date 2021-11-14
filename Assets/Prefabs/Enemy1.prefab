@@ -13,6 +13,8 @@ GameObject:
   - component: {fileID: 7086020329442946427}
   - component: {fileID: 3028115969730594921}
   - component: {fileID: 2032620818720159829}
+  - component: {fileID: 4552220618996598988}
+  - component: {fileID: 1133375998671776021}
   m_Layer: 0
   m_Name: Enemy1
   m_TagString: Untagged
@@ -147,3 +149,42 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _bounds: {fileID: 0}
   _settings: {fileID: 11400000, guid: 36767e1a8cf74a748a39afb08b1ba96e, type: 2}
+--- !u!61 &4552220618996598988
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4521536733724422009}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.05407524, y: 0.71169364}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.48526382, y: 1.0268433}
+  m_EdgeRadius: 0
+--- !u!114 &1133375998671776021
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4521536733724422009}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed41305a591080146b8401b8ad2a8927, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _scoring: {fileID: 0}
