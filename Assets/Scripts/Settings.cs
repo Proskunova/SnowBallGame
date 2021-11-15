@@ -12,6 +12,7 @@ namespace Game
         public float Speed;
         public float TimeBetweenAttack;
         public float Power;
+        public float TimeIdleMax;
 
         public int Score;
 

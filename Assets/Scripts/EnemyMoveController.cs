@@ -7,40 +7,42 @@ namespace Game
 {
     public class EnemyMoveController : MonoBehaviour
     {
+        public event System.Action OnEndMove;
+
         [SerializeField] private RandomPointBox _bounds;
-        [SerializeField] Settings _settings;
+        [SerializeField] float _speed;
+        [SerializeField] EnemyAttack _enemyAttack;
 
-        private Vector3 lookRight = Vector3.zero;
-        private Vector3 lookLeft = new Vector3(0, 180, 0);
-
-       
-        public void Init(Settings newSettings, RandomPointBox box)
+        public void Init(float speed, RandomPointBox box)
         {
-            _settings = newSettings;
+            _speed = speed;
             _bounds = box;
+        }
+
+        public void EnemyMove(Vector3 positionOut)
+        {
+            MoveToPoint(positionOut);
         }
 
         public void EnemyMove()
         {
             Vector2 randomPoint = _bounds.GetRandomPoint();
-            float distance = Vector2.Distance(randomPoint, transform.position);
-            float time = distance / _settings.Speed;
-            CheckRotation(randomPoint);
 
-            transform.DOMove(randomPoint, time).SetEase(Ease.Linear);
+            MoveToPoint(randomPoint);
         }
 
-        private void CheckRotation(Vector2 randomPoint)
+        private void MoveToPoint(Vector3 point)
         {
-            if(randomPoint.x < transform.position.x && transform.rotation.eulerAngles == lookRight)
-            {
-                transform.rotation = Quaternion.Euler(lookLeft);
-            }
-            else if(randomPoint.x > transform.position.x && transform.rotation.eulerAngles == lookLeft)
-            {
-                transform.rotation = Quaternion.Euler(lookRight);
+            transform.DOKill();
 
-            }
+            float distance = Vector2.Distance(point, transform.position);
+            float time = distance / _speed;
+            transform.rotation = Enemy.CheckRotation(point, transform);
+
+            transform.DOMove(point, time).SetEase(Ease.Linear).OnComplete(delegate
+            {
+                OnEndMove?.Invoke();
+            });
         }
     }
 }

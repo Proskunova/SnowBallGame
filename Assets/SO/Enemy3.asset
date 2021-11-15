@@ -15,8 +15,8 @@ MonoBehaviour:
   HealthsEnemy: 1
   Speed: 2.7
   TimeBetweenAttack: 5
-  TimeCreateSnowBall: 2
   Power: 0
+  TimeIdleMax: 3
   Score: 3
   Skin: PumaDaughter
   skeleton: {fileID: 11400000, guid: 4fa787752ea6a28418d0185241b583c6, type: 2}

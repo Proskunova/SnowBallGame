@@ -15,8 +15,8 @@ MonoBehaviour:
   HealthsEnemy: 0
   Speed: 2.2
   TimeBetweenAttack: 5
-  TimeCreateSnowBall: 2
   Power: 0
+  TimeIdleMax: 2
   Score: 2
   Skin: LeoSon
   skeleton: {fileID: 11400000, guid: 4fa787752ea6a28418d0185241b583c6, type: 2}

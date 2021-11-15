@@ -4,27 +4,27 @@ using UnityEngine;
 
 namespace Game
 {
-    public class PoolSnowBall : MonoBehaviour
+    public class Pool : MonoBehaviour
     {
-        [SerializeField] private List<GameObject> _poolSnowBalls;
-        [SerializeField] private GameObject _snowBall;
+        [SerializeField] private List<GameObject> _poolBalls;
+        [SerializeField] private GameObject _ball;
         [SerializeField] private int _poolAmound;
 
         private void Awake()
         {
-            _poolSnowBalls = new List<GameObject>();
+            _poolBalls = new List<GameObject>();
 
             for (int i = 0; i < _poolAmound; i++)
             {
-                GameObject gO = Instantiate(_snowBall, transform);
+                GameObject gO = Instantiate(_ball, transform);
                 gO.SetActive(false);
-                _poolSnowBalls.Add(gO);
+                _poolBalls.Add(gO);
             }
         }
 
         public GameObject GetSnowBall()
         {
-            foreach (var item in _poolSnowBalls)
+            foreach (var item in _poolBalls)
             {
                 if (item.activeSelf == false) return item;
 

@@ -8,9 +8,7 @@ namespace Game
     public class Scoring : MonoBehaviour
     {
         [SerializeField] private Text _textScore;
-        [SerializeField] Settings _settings;
-
-        private int _score;
+        [SerializeField] private int _score;
 
         private void Start()
         {
@@ -18,20 +16,18 @@ namespace Game
             UpdateText();
         }
 
-
         private void OnEnable()
         {
-            HitCheck.OnHit += ScoreCount;
+            Enemy.OnScore += ScoreCount;
         }
 
         private void OnDisable()
         {
-            HitCheck.OnHit -= ScoreCount;
+            Enemy.OnScore -= ScoreCount;
 
         }
         private void ScoreCount( int points)
         {
-            points = _settings.Score;
             _score += points;// подписаться на лист врагов и получить от туда Скор.
             UpdateText();
 

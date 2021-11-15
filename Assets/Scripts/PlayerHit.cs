@@ -4,13 +4,13 @@ using UnityEngine;
 
 namespace Game
 {
-    public class HitCheck : MonoBehaviour
+    public class PlayerHit : MonoBehaviour
     {
-        public event System.Action OnHit;
+        public static event System.Action OnHit;
 
         private void OnTriggerEnter2D(Collider2D coll)
         {
-            if (coll.CompareTag("SnowBall"))
+            if (coll.CompareTag("FireBall"))
             {
                 coll.gameObject.SetActive(false);
                 OnHit?.Invoke();

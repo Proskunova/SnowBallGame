@@ -12,8 +12,10 @@ GameObject:
   - component: {fileID: 5316752572909240532}
   - component: {fileID: 6036191378083871507}
   - component: {fileID: 5188893580858670604}
+  - component: {fileID: 1216579316872688431}
+  - component: {fileID: 8149505861965491539}
   m_Layer: 0
-  m_Name: New SkeletonAnimation
+  m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -132,3 +134,41 @@ MonoBehaviour:
   _animationName: Idle5
   loop: 0
   timeScale: 1
+--- !u!61 &1216579316872688431
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8561714792430279388}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.04790449, y: 0.6986024}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.5641594, y: 1.054006}
+  m_EdgeRadius: 0
+--- !u!114 &8149505861965491539
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8561714792430279388}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f420d64785c2ea842be79b95ff7ffa9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

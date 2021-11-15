@@ -9,7 +9,7 @@ namespace Game
     {
         [SerializeField] Settings _settings;
         [SerializeField] Button _buttonAttack;
-        [SerializeField] PoolSnowBall _poolSnowBall;
+        [SerializeField] Pool _poolSnowBall;
         [SerializeField] Transform _spawnPoint;
         [SerializeField] Slider _slider;
 
@@ -22,14 +22,12 @@ namespace Game
         {
             float powerY = _slider.value * _settings.Power;
             GameObject snowB = _poolSnowBall.GetSnowBall();
+            if (snowB == null) return;
             snowB.transform.position = _spawnPoint.position;
             snowB.SetActive(true);
             snowB.GetComponent<Rigidbody2D>().AddForce(new Vector2(powerY*2, powerY));
             
             Debug.Log("attack");
         }
-
-
-
     }
 }
