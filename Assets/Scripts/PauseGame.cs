@@ -7,6 +7,7 @@ namespace Game
 {
     public class PauseGame : MonoBehaviour, IPointerClickHandler
     {
+        [Header("Links")]
         [SerializeField] GameObject _pausePanel;
 
         public static bool IsPaused = false;
@@ -25,7 +26,7 @@ namespace Game
             }
         }
          
-        private void Pause()
+        public void Pause()
         {
             _pausePanel.SetActive(true);
             Time.timeScale = 0f;

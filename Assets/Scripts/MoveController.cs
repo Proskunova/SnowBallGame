@@ -8,12 +8,13 @@ namespace Game
 {
     public class MoveController : MonoBehaviour
     {
+        [Header("Links")]
         [SerializeField] Settings _settings;
         [SerializeField] SimpleInputNamespace.Joystick _joystick;
         [SerializeField] RandomPointBox _box;
 
         private SkeletonAnimation _skeletonAnimotion;
-        //private Vector2 temp;
+
         private void Awake()
         {
             _skeletonAnimotion = this.GetComponent<SkeletonAnimation>();

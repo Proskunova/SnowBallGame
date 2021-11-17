@@ -7,6 +7,7 @@ namespace Game
 {
     public class AttackController : MonoBehaviour
     {
+        [Header("Links")]
         [SerializeField] Settings _settings;
         [SerializeField] Button _buttonAttack;
         [SerializeField] Pool _poolSnowBall;

@@ -10,7 +10,6 @@ namespace Game
         [SerializeField] Transform _spawnPointF;
         [SerializeField] Pool _poolFareBall;
 
-
         public void Init(float newPower, Pool pool)
         {
             _poolFareBall = pool;

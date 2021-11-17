@@ -7,7 +7,14 @@ namespace Game
 {
     public class Scoring : MonoBehaviour
     {
+        [Header("Links")]
         [SerializeField] private Text _textScore;
+        [SerializeField] LevelComplete _levelComplete;
+
+        [Header("Data")]
+        [SerializeField] private int _scoreWin;
+
+        [Header("DEBUG")]
         [SerializeField] private int _score;
 
         private void Start()
@@ -24,12 +31,14 @@ namespace Game
         private void OnDisable()
         {
             Enemy.OnScore -= ScoreCount;
-
         }
+
         private void ScoreCount( int points)
         {
-            _score += points;// подписаться на лист врагов и получить от туда Скор.
+            _score += points;
             UpdateText();
+
+            if (_score >= _scoreWin) _levelComplete.Win();
 
             Debug.Log(_score);
         }

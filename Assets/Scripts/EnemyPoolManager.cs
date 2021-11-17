@@ -7,11 +7,15 @@ namespace Game
 {
     public class EnemyPoolManager : MonoBehaviour
     {
+        [Header("Links")]
         [SerializeField] private List<Settings> _listSettings;
         [SerializeField] private List<Enemy> _pool;
         [SerializeField] private Enemy _pooledEnemy;
-        [SerializeField] private int _pooledAmount;
         [SerializeField] Pool _poolFireBalls;
+
+        [Header("Data")]
+        [SerializeField] private int _pooledAmount;
+
 
         private void Awake()
         {
