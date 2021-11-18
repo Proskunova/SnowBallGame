@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DG.Tweening;
+using UnityEngine.UI;
 
 namespace Game
 {
@@ -9,31 +11,31 @@ namespace Game
         [Header("Links")]
         [SerializeField] private GameObject _panelWin;
         [SerializeField] CheckHealth _checkHealth;
-
-        private void Start()
-        {
-            //Win();
-        }
+        [SerializeField] private Image _stars1;
+        [SerializeField] private Image _stars2;
+        [SerializeField] private Image _stars3;
 
         public void Win()
         {
-            Time.timeScale = 0f;
+            StarsWin();
             _panelWin.SetActive(true);
-
-            //int b = _checkHealth.Heart;
-            Debug.Log(" _checkHealth.Heart=" + _checkHealth.Heart);
-
-           /* if ((_checkHealth.Heart) == 1)*/ PlayerPrefs.SetInt("stars", (_checkHealth.Heart));
-            //if ((_checkHealth.Heart) == 2) PlayerPrefs.SetInt("stars", (_checkHealth.Heart));
-            //if ((_checkHealth.Heart) == 3) PlayerPrefs.SetInt("stars", (_checkHealth.Heart));
-
-            Debug.Log("stars="+PlayerPrefs.GetInt("stars"));
+            Time.timeScale = 0f;
         }
 
         private void StarsWin()
         {
-
+            if(_checkHealth.Heart== 2)
+            {
+                _stars1.DOFade(255, 1);
+                _stars2.DOFade(255, 1);
+            }
+            else if(_checkHealth.Heart == 3)
+            {
+                _stars1.DOFade(255, 1);
+                _stars2.DOFade(255, 1);
+                _stars3.DOFade(255, 1);
+            }
+            _stars1.DOFade(255, 1);
         }
-
     }
 }
