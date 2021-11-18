@@ -15,8 +15,8 @@ MonoBehaviour:
   HealthsEnemy: 3
   Speed: 2.5
   TimeBetweenAttack: 2
-  TimeCreateSnowBall: 2
   Power: 300
+  TimeIdleMax: 0
   Score: 0
   Skin: Hippo
   skeleton: {fileID: 11400000, guid: 4fa787752ea6a28418d0185241b583c6, type: 2}

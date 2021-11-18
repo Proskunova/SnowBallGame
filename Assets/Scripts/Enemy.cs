@@ -31,6 +31,8 @@ namespace Game
         [SpineAnimation]
         [SerializeField] string hit;
 
+        Coroutine cAttack;
+
         private void OnEnable()
         {
             hitCheck.OnHit += HitCheck_OnHit;
@@ -54,7 +56,7 @@ namespace Game
                 return;
             }
 
-            StartCoroutine(WaitAttack());
+            cAttack = StartCoroutine(WaitAttack());
         }
 
         private IEnumerator WaitAttack()
@@ -74,6 +76,7 @@ namespace Game
 
         private void HitCheck_OnHit()
         {
+            if(cAttack != null)StopCoroutine(cAttack);
             transform.DOKill();
             OnScore?.Invoke(settings.Score);
             collider2D.enabled = false;

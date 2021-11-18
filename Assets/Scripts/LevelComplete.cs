@@ -11,31 +11,31 @@ namespace Game
         [Header("Links")]
         [SerializeField] private GameObject _panelWin;
         [SerializeField] CheckHealth _checkHealth;
-        [SerializeField] private Image _stars1;
-        [SerializeField] private Image _stars2;
-        [SerializeField] private Image _stars3;
+        [SerializeField] private Image[] _arrStars;
+
+        private void Awake()
+        {
+            for (int i = 0; i < _arrStars.Length; i++)
+            {
+                 _arrStars[i].DOFade(0.3f, 0);
+
+            }
+        }
 
         public void Win()
         {
-            StarsWin();
-            _panelWin.SetActive(true);
             Time.timeScale = 0f;
+            _panelWin.SetActive(true);
+            StarsWin();
         }
 
         private void StarsWin()
         {
-            if(_checkHealth.Heart== 2)
+            for (int i = 0; i < _arrStars.Length; i++)
             {
-                _stars1.DOFade(255, 1);
-                _stars2.DOFade(255, 1);
+                if (i < _checkHealth.Heart) _arrStars[i].DOFade(1, 3).SetUpdate(true);
+
             }
-            else if(_checkHealth.Heart == 3)
-            {
-                _stars1.DOFade(255, 1);
-                _stars2.DOFade(255, 1);
-                _stars3.DOFade(255, 1);
-            }
-            _stars1.DOFade(255, 1);
         }
     }
 }

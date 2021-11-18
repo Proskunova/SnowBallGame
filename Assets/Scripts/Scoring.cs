@@ -10,9 +10,10 @@ namespace Game
         [Header("Links")]
         [SerializeField] private Text _textScore;
         [SerializeField] LevelComplete _levelComplete;
+        [SerializeField] SOSettingsGame _settings;
 
-        [Header("Data")]
-        [SerializeField] private int _scoreWin;
+        //[Header("Data")]
+        //[SerializeField] private int _scoreWin;
 
         [Header("DEBUG")]
         [SerializeField] private int _score;
@@ -38,7 +39,7 @@ namespace Game
             _score += points;
             UpdateText();
 
-            if (_score >= _scoreWin) _levelComplete.Win();
+            if (_score >= _settings.ScoreWin) _levelComplete.Win();
 
             Debug.Log(_score);
         }

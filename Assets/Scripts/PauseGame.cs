@@ -27,6 +27,8 @@ namespace Game
 
         public void OnPointerClick(PointerEventData eventData)
         {
+            _rect.DOKill();
+
             if (IsPaused)
             {
                 Back();
@@ -44,9 +46,9 @@ namespace Game
 
         public void Pause()
         {
+            IsPaused = true;
             MoveRect(_showPosition, _showTime, _show);
             Time.timeScale = 0f;
-            IsPaused = true;
         }
 
         private void Back()

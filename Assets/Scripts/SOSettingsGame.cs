@@ -8,8 +8,5 @@ namespace Game
     public class SOSettingsGame : ScriptableObject
     {
         public int ScoreWin;
-        public int StarsWin;
-        public float TimeCreateSnowBall;
-
     }
 }
