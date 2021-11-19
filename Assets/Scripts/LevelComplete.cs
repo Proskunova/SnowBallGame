@@ -18,7 +18,6 @@ namespace Game
             for (int i = 0; i < _arrStars.Length; i++)
             {
                  _arrStars[i].DOFade(0.3f, 0);
-
             }
         }
 
@@ -34,7 +33,6 @@ namespace Game
             for (int i = 0; i < _arrStars.Length; i++)
             {
                 if (i < _checkHealth.Heart) _arrStars[i].DOFade(1, 3).SetUpdate(true);
-
             }
         }
     }

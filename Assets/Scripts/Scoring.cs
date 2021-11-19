@@ -12,9 +12,6 @@ namespace Game
         [SerializeField] LevelComplete _levelComplete;
         [SerializeField] SOSettingsGame _settings;
 
-        //[Header("Data")]
-        //[SerializeField] private int _scoreWin;
-
         [Header("DEBUG")]
         [SerializeField] private int _score;
 

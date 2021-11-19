@@ -16,7 +16,6 @@ namespace Game
         [Header("Data")]
         [SerializeField] private int _health = 3;
 
-
         private void Start()
         {
             UpdateText();

@@ -250,7 +250,6 @@ GameObject:
   m_Component:
   - component: {fileID: 150850667}
   - component: {fileID: 150850666}
-  - component: {fileID: 150850668}
   m_Layer: 5
   m_Name: Slider
   m_TagString: Untagged
@@ -327,23 +326,9 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 346, y: -464}
-  m_SizeDelta: {x: 552.22, y: 70.74}
+  m_AnchoredPosition: {x: 387, y: -464}
+  m_SizeDelta: {x: 701.6924, y: 88.93015}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &150850668
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 150850665}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3c2da22ff9d8eb643b42deebc47cbf97, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _slider: {fileID: 150850666}
-  _timeMove: 1.5
 --- !u!224 &162839029 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 224977699150327530, guid: e0815e227ed46e445b99930271e8942c,
@@ -467,14 +452,14 @@ RectTransform:
   m_GameObject: {fileID: 269137452}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.7, y: 1.7, z: 1}
   m_Children: []
   m_Father: {fileID: 821202569}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -2, y: 0}
   m_SizeDelta: {x: 20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &269137454
@@ -1289,10 +1274,10 @@ RectTransform:
   m_Father: {fileID: 150850667}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMin: {x: 0.018550757, y: 0}
+  m_AnchorMax: {x: 0.9885749, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: -20, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &842547460
 GameObject:
@@ -1350,7 +1335,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: -100
-  m_Sprite: {fileID: 21300000, guid: 0d89629316fd1b145b10e908478d37a5, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d8d2d99f1f9f8554ca0a73a9eb17ba31, type: 3}
   m_Color: {r: 0.6226415, g: 0.6226415, b: 0.6226415, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1369,8 +1354,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 842547460}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.99, y: 8.711, z: 0}
-  m_LocalScale: {x: 3.3607059, y: 11.065463, z: 3}
+  m_LocalPosition: {x: 6.02, y: 8.61, z: 0}
+  m_LocalScale: {x: 0.8, y: 0.8, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 10
@@ -1406,7 +1391,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _poolBalls: []
   _ball: {fileID: 7113985764793618478, guid: 92914f882b495bd44954862c230abc90, type: 3}
-  _poolAmound: 6
+  _poolAmound: 9
 --- !u!4 &858718084
 Transform:
   m_ObjectHideFlags: 0
@@ -1691,7 +1676,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -2884,7 +2869,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _poolBalls: []
   _ball: {fileID: 5524519589681843516, guid: c53bf07e19a0322489604bf2eebd9400, type: 3}
-  _poolAmound: 30
+  _poolAmound: 15
 --- !u!4 &1643362708
 Transform:
   m_ObjectHideFlags: 0
@@ -2913,6 +2898,7 @@ GameObject:
   - component: {fileID: 1712562395}
   - component: {fileID: 1712562393}
   - component: {fileID: 1712562398}
+  - component: {fileID: 1712562394}
   m_Layer: 0
   m_Name: UIController
   m_TagString: Untagged
@@ -2933,6 +2919,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _tryAgain: {fileID: 1452327827}
+--- !u!114 &1712562394
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1712562392}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c2da22ff9d8eb643b42deebc47cbf97, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _slider: {fileID: 150850666}
+  _timeMove: 1.5
 --- !u!114 &1712562395
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -8,7 +8,10 @@ namespace Game
 {
     public class YoYoSlider : MonoBehaviour
     {
+        [Header("Links")]
         [SerializeField] private Slider _slider;
+
+        [Header("Data")]
         [SerializeField] private float _timeMove;
 
         private void Start()

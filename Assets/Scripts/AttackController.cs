@@ -54,6 +54,5 @@ namespace Game
             Attack();
             Cooldown();
         }
-
     }
 }

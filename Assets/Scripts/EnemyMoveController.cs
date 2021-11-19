@@ -10,8 +10,9 @@ namespace Game
         public event System.Action OnEndMove;
 
         [SerializeField] private RandomPointBox _bounds;
-        [SerializeField] float _speed;
         [SerializeField] EnemyAttack _enemyAttack;
+
+        [SerializeField] float _speed;
 
         public void Init(float speed, RandomPointBox box)
         {

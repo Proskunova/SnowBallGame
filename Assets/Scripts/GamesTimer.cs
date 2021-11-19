@@ -8,13 +8,13 @@ namespace Game
 {
     public class GamesTimer : MonoBehaviour
     {
+        [Header("Links")]
         [SerializeField] private Text _textTime;
 
         private float _gameSeconds = 0;
         private float _gameMinute = 0;
         private float _sixty = 60f;
 
-       
         void Update()
         {
             _gameSeconds += Time.deltaTime;

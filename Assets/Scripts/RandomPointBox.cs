@@ -9,6 +9,7 @@ namespace Game
         public Vector2 GetBoundMax => boundMax;
         public Vector2 GetBoundMin => boundMin;
 
+        [Header("Data")]
         [SerializeField] private Vector2 boundMin;
         [SerializeField] private Vector2 boundMax;
         [SerializeField] private Color _color;

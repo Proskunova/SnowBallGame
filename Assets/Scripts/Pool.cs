@@ -7,7 +7,11 @@ namespace Game
     public class Pool : MonoBehaviour
     {
         [SerializeField] private List<GameObject> _poolBalls;
+
+        [Header("Links")]
         [SerializeField] private GameObject _ball;
+
+        [Header("Data")]
         [SerializeField] private int _poolAmound;
 
         private void Awake()

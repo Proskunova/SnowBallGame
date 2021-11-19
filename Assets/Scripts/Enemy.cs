@@ -1,7 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
 using Spine.Unity;
 using DG.Tweening;
 
@@ -92,6 +91,11 @@ namespace Game
             moveController.EnemyMove(pointOut.position);
         }
 
+        private void Move()
+        {
+            moveController.EnemyMove();
+            anim.state.SetAnimation(0, walk, true);
+        }
 
         public void SetSettings(Settings newSettings)
         {
@@ -114,12 +118,6 @@ namespace Game
             gameObject.SetActive(true);
 
             Move();
-        }
-
-        private void Move()
-        {
-            moveController.EnemyMove();
-            anim.state.SetAnimation(0, walk, true);
         }
 
         public static Quaternion CheckRotation(Vector2 movePoint, Transform t)
